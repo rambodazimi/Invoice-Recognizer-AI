@@ -1,7 +1,5 @@
---------Recognizing invoice--------
---------Recognizing invoice #1--------
-Vendor Name,OXYPRO®
-Vendor Address,"AddressValue(house_number=2788, po_box=None, road=de la Sidbec Nord, city=Trois-Rivières, state=Qc, postal_code=G8Z 4E1, country_region=None, street_address=2788 de la Sidbec Nord)"
+Vendor Name,OXYPROÂ®
+Vendor Address,"AddressValue(house_number=2788, po_box=None, road=de la Sidbec Nord, city=Trois-RiviÃ¨res, state=Qc, postal_code=G8Z 4E1, country_region=None, street_address=2788 de la Sidbec Nord)"
 Vendor Address Recipient,N/A
 Customer Name,WALTER
 Customer Id,N/A
@@ -14,7 +12,7 @@ Due Date,N/A
 Purchase Order,4902
 Billing Address,N/A
 Billing Address Recipient,N/A
-Shipping Address,"AddressValue(house_number=2788, po_box=None, road=de la Sidbec Nord, city=Trois-Rivières, state=None, postal_code=G8Z
+Shipping Address,"AddressValue(house_number=2788, po_box=None, road=de la Sidbec Nord, city=Trois-RiviÃ¨res, state=None, postal_code=G8Z
 4E1, country_region=None, street_address=2788 de la Sidbec Nord)"
 Shipping Address Recipient,Oxy-Pro Inc.
 Sub Total,688.51
