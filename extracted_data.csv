@@ -1,0 +1,71 @@
+--------Recognizing invoice--------,
+--------Recognizing invoice #1--------,
+Vendor Name,CONTOSO LTD.
+Vendor Address,"AddressValue(house_number=123, po_box=None, road=456th St, city=New York, state=NY, postal_code=10001, country_region=None, street_address=123 456th St)"
+Vendor Address Recipient,Contoso Headquarters
+Customer Name,MICROSOFT CORPORATION
+Customer Id,CID-12345
+Customer Address,"AddressValue(house_number=123, po_box=None, road=Other St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Other St)"
+Customer Address Recipient,Microsoft Corp
+Invoice Id,INV-100
+Invoice Date,11/15/2019
+Invoice Total,$110.00 
+Due Date,12/15/2019
+Purchase Order,PO-3333
+Billing Address,"AddressValue(house_number=123, po_box=None, road=Bill St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Bill St)"
+Billing Address Recipient,Microsoft Finance
+Shipping Address,"AddressValue(house_number=123, po_box=None, road=Ship St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Ship St)"
+Shipping Address Recipient,Microsoft Delivery
+Sub Total,$100.00 
+Total Tax,$10.00 
+Previous Unpaid Balance,$500.00 
+Amount Due,$610.00 
+Service Start Date,N/A
+Service End Date,N/A
+Service Address,"AddressValue(house_number=123, po_box=None, road=Service St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Service St)"
+Service Address Recipient,Microsoft Services
+Remittance Address,"AddressValue(house_number=123, po_box=None, road=Remit St, city=New York, state=NY, postal_code=10001, country_region=None, street_address=123 Remit St)"
+Remittance Address Recipient,Contoso Billing
+Invoice items:,
+Item #1,
+Description,Test for 23 fields
+Quantity,1
+Unit Price,1
+Amount,$100.00 
+,
+----------------------------------------,
+--------Recognizing invoice #1--------
+Vendor Name,CONTOSO LTD.
+Vendor Address,"AddressValue(house_number=123, po_box=None, road=456th St, city=New York, state=NY, postal_code=10001, country_region=None, street_address=123 456th St)"
+Vendor Address Recipient,Contoso Headquarters
+Customer Name,MICROSOFT CORPORATION
+Customer Id,CID-12345
+Customer Address,"AddressValue(house_number=123, po_box=None, road=Other St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Other St)"
+Customer Address Recipient,Microsoft Corp
+Invoice Id,INV-100
+Invoice Date,2019-11-15
+Invoice Total,$110.0
+Due Date,2019-12-15
+Purchase Order,PO-3333
+Billing Address,"AddressValue(house_number=123, po_box=None, road=Bill St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Bill St)"
+Billing Address Recipient,Microsoft Finance
+Shipping Address,"AddressValue(house_number=123, po_box=None, road=Ship St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Ship St)"
+Shipping Address Recipient,Microsoft Delivery
+Sub Total,$100.0
+Total Tax,$10.0
+Previous Unpaid Balance,$500.0
+Amount Due,$610.0
+Service Start Date,N/A
+Service End Date,N/A
+Service Address,"AddressValue(house_number=123, po_box=None, road=Service St, city=Redmond, state=WA, postal_code=98052, country_region=None, street_address=123 Service St)"
+Service Address Recipient,Microsoft Services
+Remittance Address,"AddressValue(house_number=123, po_box=None, road=Remit St, city=New York, state=NY, postal_code=10001, country_region=None, street_address=123 Remit St)"
+Remittance Address Recipient,Contoso Billing
+Invoice items:
+Item #1
+Description,Test for 23 fields
+Quantity,1.0
+Unit Price,1.0
+Amount,$100.0
+
+----------------------------------------
