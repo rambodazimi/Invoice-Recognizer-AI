@@ -31,8 +31,7 @@ Item #1,
 Description,Test for 23 fields
 Quantity,1
 Unit Price,1
-Amount,$100.00 
-
+Amount,$100.00
 ----------------------------------------,
 --------Recognizing invoice #1--------
 Vendor Name,CONTOSO LTD.
