@@ -4,8 +4,8 @@ from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
 
 # Set the endpoint and key variables with the values from the Azure portal
-endpoint = "https://walterforms.cognitiveservices.azure.com/"
-key = "d436aeca36244041b2c3cf21bee5921b"
+endpoint = "<Your Endpoint>"
+key = "<Your Key>"
 
 def format_bounding_region(bounding_regions):
     if not bounding_regions:
