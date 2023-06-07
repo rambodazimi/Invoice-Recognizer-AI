@@ -84,4 +84,6 @@ Make sure you have write permissions for the directory where the script is locat
 This script utilizes the Azure Form Recognizer service provided by Microsoft Azure. Learn more about Azure Form Recognizer and its capabilities at Azure Form Recognizer Documentation.
 
 ## Contact
-If you have any questions or suggestions regarding this script, feel free to contact me at rambod.azm@gmail.com or visit my personal website at rambodazimi.com
+If you have any questions or suggestions regarding this script, feel free to contact me at rambod.azm@gmail.com or visit my personal website at [rambodazimi.com](http://rambodazimi.com/).
+
+
