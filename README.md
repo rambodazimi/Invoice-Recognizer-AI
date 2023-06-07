@@ -15,26 +15,26 @@ Clone the repository or download the script file to your local machine.
 
 Install the required Python packages. You can use pip to install them:
 
-bash
-Copy code
+```
 pip install azure-ai-formrecognizer
+```
 Usage
 Set the endpoint and key variables in the script with the values obtained from the Azure portal:
 
-python
-Copy code
+```
 endpoint = "https://your-form-recognizer-endpoint-url/"
 key = "your-form-recognizer-api-key"
+```
 Specify the URL of the invoice you want to analyze:
 
-python
-Copy code
+```
 invoiceUrl = "https://path-to-your-invoice.pdf"
+```
 Run the script:
 
-bash
-Copy code
+```
 python invoice_extraction_script.py
+```
 The script will connect to the Azure Form Recognizer service, analyze the invoice, and extract the desired fields. The extracted data will be saved to a CSV file named extracted_data.csv.
 
 ## Output
@@ -51,8 +51,7 @@ The invoices are separated by an empty row, followed by a row of dashes (-------
 ## Example
 For a better understanding, here's an example of how the extracted data might appear in the CSV file:
 
-mathematica
-Copy code
+```
 --------Recognizing invoice #1--------
 Vendor Name, Example Vendor
 Vendor Address, 123 Main Street, City, State, ZIP
@@ -72,6 +71,7 @@ Description, Product B
 Quantity, 1
 Unit Price, $150.00
 ...
+```
 ----------------------------------------
 ## Notes
 The script supports analyzing multiple invoices in sequence. Each invoice will be separated in the CSV file for clarity.
@@ -84,4 +84,4 @@ Make sure you have write permissions for the directory where the script is locat
 This script utilizes the Azure Form Recognizer service provided by Microsoft Azure. Learn more about Azure Form Recognizer and its capabilities at Azure Form Recognizer Documentation.
 
 ## Contact
-If you have any questions or suggestions regarding this script, feel free to contact me at [
+If you have any questions or suggestions regarding this script, feel free to contact me at rambod.azm@gmail.com or visit my personal website at rambodazimi.com
