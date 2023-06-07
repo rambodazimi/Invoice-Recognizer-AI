@@ -1,0 +1,83 @@
+--------Recognizing invoice--------
+--------Recognizing invoice #1--------
+Vendor Name,OXYPRO®
+Vendor Address,"AddressValue(house_number=2788, po_box=None, road=de la Sidbec Nord, city=Trois-Rivières, state=Qc, postal_code=G8Z 4E1, country_region=None, street_address=2788 de la Sidbec Nord)"
+Vendor Address Recipient,N/A
+Customer Name,WALTER
+Customer Id,N/A
+Customer Address,"AddressValue(house_number=5977, po_box=None, road=Transcanadienne Ouest, city=Pointe-Claire, state=Quebec, postal_code=H9R 1C1, country_region=None, street_address=5977 Transcanadienne Ouest)"
+Customer Address Recipient,WALTER
+Invoice Id,N/A
+Invoice Date,N/A
+Invoice Total,791.62
+Due Date,N/A
+Purchase Order,4902
+Billing Address,N/A
+Billing Address Recipient,N/A
+Shipping Address,"AddressValue(house_number=2788, po_box=None, road=de la Sidbec Nord, city=Trois-Rivières, state=None, postal_code=G8Z
+4E1, country_region=None, street_address=2788 de la Sidbec Nord)"
+Shipping Address Recipient,Oxy-Pro Inc.
+Sub Total,688.51
+Total Tax,N/A
+Previous Unpaid Balance,N/A
+Amount Due,N/A
+Service Start Date,N/A
+Service End Date,N/A
+Service Address,N/A
+Service Address Recipient,N/A
+Remittance Address,N/A
+Remittance Address Recipient,N/A
+Invoice items:
+Item #1
+Description,"DISQUE 5''
+COOLCUT XX GR
+36"
+Unit,EA
+Unit Price,1.95
+Product Code,15X503
+Amount,390.0
+Item #2
+Description,TAMPON-SOUTIEN QS 4 X 5/8
+Quantity,2.0
+Unit,EA
+Unit Price,29.7
+Product Code,WAL-07Q044
+Amount,59.4
+Item #3
+Description,"5
+INCH BACKING PAD
+Notre
+# Piece: WAL-15D054"
+Unit,EA
+Unit Price,10.44
+Product Code,15D054
+Amount,104.4
+Item #4
+Description,"4-1/2 GR24 DISQUES-COOLCUT XX
+Notre
+# Piece: WAL-15X452"
+Unit,EA
+Unit Price,1.98
+Product Code,15X452
+Amount,49.5
+Item #5
+Description,"ANTI
+SPATTER WALTER
+3.78L
+Notre
+# Piece: WAL-53F205"
+Unit,EA
+Unit Price,61.2
+Product Code,53F205
+Amount,61.2
+Item #6
+Description,"CHIFFON VERT WALTER
+Notre
+# Piece: WAL-57M001"
+Quantity,1.0
+Unit,EA
+Unit Price,24.01
+Product Code,57M001
+Amount,24.01
+
+----------------------------------------
