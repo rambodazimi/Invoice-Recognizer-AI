@@ -4,8 +4,8 @@ from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
 
 # Set the endpoint and key variables with the values from the Azure portal
-endpoint = "<Your Endpoint>"
-key = "<Your Key>"
+endpoint = "https://walterforms.cognitiveservices.azure.com/"
+key = "d436aeca36244041b2c3cf21bee5921b"
 
 def format_bounding_region(bounding_regions):
     if not bounding_regions:
@@ -17,12 +17,16 @@ def format_polygon(polygon):
         return "N/A"
     return ", ".join(["[{}, {}]".format(p.x, p.y) for p in polygon])
 
-def analyze_invoice():
-    invoiceUrl = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/sample-invoice.pdf"
+def analyze_invoice(url_input):
 
+    if(len(url_input) == 0):
+        invoiceUrl = "https://docs.google.com/uc?export=download&id=1BnyEGi00M1vL5mYsViZj2bv5cIIKDRZN"
+        invoiceUrl2 = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/sample-invoice.pdf"
+    else:
+        invoiceUrl = url_input
     document_analysis_client = DocumentAnalysisClient(endpoint=endpoint, credential=AzureKeyCredential(key))
 
-    output_file = "C:\\Users\\razimi\\OneDrive - Walter Surface Technologies\\Desktop\\python\\form_recognizer\\extracted_data.csv"
+    output_file = "C:\\Users\\razimi\\OneDrive - Walter Surface Technologies\\Desktop\\python\\form_recognizer\\output.csv"
     file_exists = os.path.exists(output_file)
 
     with open(output_file, "a", newline="") as csv_file:
@@ -33,6 +37,8 @@ def analyze_invoice():
 
         poller = document_analysis_client.begin_analyze_document_from_url("prebuilt-invoice", invoiceUrl)
         invoices = poller.result()
+
+        print("Extracting data...")
 
         for idx, invoice in enumerate(invoices.documents):
             writer.writerow(["--------Recognizing invoice #{}--------".format(idx + 1)])
@@ -104,8 +110,17 @@ def analyze_invoice():
 
             writer.writerow([])  # Write an empty row to separate invoices
             writer.writerow(["----------------------------------------"])
-
-    print("Data extracted from invoices has been saved to: {}".format(output_file))
+    print("Exporting the CSV file...")
+    print("Data extracted from the document has been saved to: {}".format(output_file))
 
 if __name__ == "__main__":
-    analyze_invoice()
+    url_input = input("Please enter the url of the document:")
+
+    print("Analyzing the document...")
+
+    analyze_invoice(url_input)
+
+    print("100% SUCCESSFUL!")
+
+    input("Press Enter to exit...")
+
