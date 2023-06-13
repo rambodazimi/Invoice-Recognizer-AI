@@ -6,10 +6,16 @@ import os
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
 import threading
+import subprocess
+import pyautogui
+
 
 # Set the endpoint and key variables with the values from the Azure portal
-endpoint = "<Your Endpoint>"
-key = "<Your Key>"
+endpoint = "https://walterforms.cognitiveservices.azure.com/"
+key = "d436aeca36244041b2c3cf21bee5921b"
+
+# global variables
+csv_filep = "C:\\Users\\razimi\\OneDrive - Walter Surface Technologies\\Desktop\\python\\form_recognizer\\output_prebuilt.csv"
 
 def analyze_url():
     url = url_entry.get()
@@ -33,18 +39,20 @@ def analyze_url():
 def browse_pdf():
     message_label.config(text="Analyzing the document...", fg="blue")
     file_path = filedialog.askopenfilename(filetypes=[("PDF Files", "*.pdf")])
+    
     if file_path:
         # Start a new thread to perform the analysis
         analysis_thread = threading.Thread(target=perform_analysis, args=(file_path,))
         analysis_thread.start()
         analyze_invoice("noURL", False, file_path)
         message_label.config(text="CSV file has been generated successfully!", fg="green")
+        open_files_side_by_side(pdf_path=file_path, excel_path=csv_filep)
 
 
 def perform_analysis(input_data):
     # Simulate a long-running analysis task
     import time
-    time.sleep(10)  # Replace this with your actual analysis code
+    time.sleep(5)  # Replace this with your actual analysis code
     
 
 # Create the main window
@@ -80,8 +88,8 @@ browse_button = tk.Button(content_frame, text="Browse", font=("Arial", 12), comm
 browse_button.pack(pady=10)
 
 # Create a button to browse for a PDF file
-start_button = tk.Button(content_frame, text="Start", font=("Arial", 12))
-start_button.pack(pady=5)
+# start_button = tk.Button(content_frame, text="Start", font=("Arial", 12))
+# start_button.pack(pady=5)
 
 # Create a message label
 message_label = tk.Label(window, text="", font=("Arial", 12), bg="#F0F0F0")  # Set the background color of the message label
@@ -209,6 +217,39 @@ def analyze_invoice(url_input, isUrl, filePath):
             writer.writerow([])  # Write an empty row to separate invoices
             writer.writerow(["----------------------------------------"])
 
+# this method opens both the invoice (pdf) and the output (csv) at the same time
+def open_files_side_by_side(pdf_path, excel_path):
+    # Open the PDF file using the default system viewer
+    subprocess.Popen([pdf_path], shell=True)
+
+    # Open the Excel file using the default system application
+    subprocess.Popen([excel_path], shell=True)
+
+    # Wait for the applications to open
+    pyautogui.sleep(2)
+
+    # Get the screen dimensions
+    screen_width, screen_height = pyautogui.size()
+
+    # Set the PDF window position
+    pdf_window_x = 0
+    pdf_window_y = 0
+    pdf_window_width = screen_width // 2
+    pdf_window_height = screen_height
+
+    # Set the Excel window position
+    excel_window_x = screen_width // 2
+    excel_window_y = 0
+    excel_window_width = screen_width // 2
+    excel_window_height = screen_height
+
+    # Move and resize the PDF window
+    pyautogui.getWindowsWithTitle('PDF Viewer')[0].resizeTo(pdf_window_width, pdf_window_height)
+    pyautogui.getWindowsWithTitle('PDF Viewer')[0].moveTo(pdf_window_x, pdf_window_y)
+
+    # Move and resize the Excel window
+    pyautogui.getWindowsWithTitle('Microsoft Excel')[0].resizeTo(excel_window_width, excel_window_height)
+    pyautogui.getWindowsWithTitle('Microsoft Excel')[0].moveTo(excel_window_x, excel_window_y)
 
 # main
 # Start the main loop
