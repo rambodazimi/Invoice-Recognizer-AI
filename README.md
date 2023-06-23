@@ -48,11 +48,6 @@ The invoice items, such as line items or product details, are listed below the f
 
 The invoices are separated by an empty row, followed by a row of dashes (----------------------------------------).
 
-<img width="300" alt="1" src="https://github.com/rambodazimi/Invoice-Recognizer-AI/assets/59399542/a0afdda4-63d0-4898-8d19-e194fc26bf03">
-
-![2](https://github.com/rambodazimi/Invoice-Recognizer-AI/assets/59399542/c7f9be57-71e5-4888-afda-8f1842cfe0d8)
-
-
 
 ## Example
 For a better understanding, here's an example of how the extracted data might appear in the CSV file:
